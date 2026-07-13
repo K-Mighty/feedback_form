@@ -74,17 +74,59 @@ const FeedbackForm = () => {
         <div style={{
             display: 'flex',
             gap: '10px',
-            flexDirection: 'column'
+            flexDirection: 'column',
+            marginBottom: '1rem'
             }}>Rate us: 
-            <input 
-                type="radio" 
-                name="rating"
-                onChange={handleChange} />
-            <label htmlFor="1">1</label>
-            <label htmlFor="2">2</label>
-            <label htmlFor="3">3</label>
-            <label htmlFor="4">4</label>
-            <label htmlFor="5">5</label>
+            <div>
+                <input 
+                    type="radio" 
+                    id='rating-1'
+                    name="rating"
+                    value="1"
+                    checked={formData.rating === '1'}
+                    onChange={handleChange} />
+                <label htmlFor="rating-1"> 1</label>
+            </div>
+            <div>
+                <input 
+                    type="radio" 
+                    name="rating"
+                    id="rating-2"
+                    value="2"
+                    checked={formData.rating === '2'}
+                    onChange={handleChange} />
+                <label htmlFor="rating-2"> 2</label>
+            </div>
+            <div>
+                <input 
+                    type="radio" 
+                    name="rating"
+                    id="rating-3"
+                    value="3"
+                    checked={formData.rating === '3'}
+                    onChange={handleChange} />
+                <label htmlFor="rating-3"> 3</label>
+            </div>
+            <div>
+                <input 
+                    type="radio" 
+                    name="rating"
+                    id="rating-4"
+                    value="4"
+                    checked={formData.rating === '4'}
+                    onChange={handleChange} />
+                <label htmlFor="rating-4"> 4</label>
+            </div>
+            <div>
+                <input 
+                    type="radio" 
+                    name="rating"
+                    id="rating-5"
+                    value="5"
+                    checked={formData.rating === '5'}
+                    onChange={handleChange} />
+                <label htmlFor="rating-5"> 5</label>
+            </div>
         </div>
         <button type='submit'>Submit Feedback</button>
       </form>
